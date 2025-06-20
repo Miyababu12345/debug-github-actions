@@ -1,0 +1,23 @@
+name: Custom Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup environment
+        run: echo "Setting up environment..."
+
+      - name: Display greeting
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Custom debug message
+        run: echo "Debugging by Anitha, a test action!"
+
